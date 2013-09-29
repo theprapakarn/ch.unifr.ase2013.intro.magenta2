@@ -6,6 +6,7 @@
       </h2>
       <ul>
          <% @post.errors.full_messages.each do |msg| %>
+         <li><%= msg %></li>
          <% end %>
       </ul>
     </div>
