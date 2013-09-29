@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   
   def new
-    @post = Post.new
+    @post = Post.new(params[:post].permit(:title, :text))
   end
  
   def index
