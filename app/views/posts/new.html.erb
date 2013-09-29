@@ -2,6 +2,8 @@
   
   <% if @post.errors.any? %>
     <div id ="errorExplanation">
+      <h2> <%= pluralize(@post.error.count, "error") %> Error
+      </h2>
     </div>
   <% end %>
 
