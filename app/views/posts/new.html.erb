@@ -1,15 +1,4 @@
 <%= form_for :post, url: posts_path do |f| %>
-  <% if @post.errors.any? %>
-  <div id="errorExplanation">
-    <h2><%= pluralize(@post.errors.count, "error")  %>
-        cannot save this post:
-    </h2>
-    <ul>
-      <% @post.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul> 
-  </div>
   <p>
      <%= f.label :title %><br>
      <%= f.text_field :tile %>
