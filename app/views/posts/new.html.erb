@@ -4,6 +4,10 @@
     <div id ="errorExplanation">
       <h2> <%= pluralize(@post.error.count, "error") %> Error
       </h2>
+      <ul>
+         <% @post.errors.full_messages.each do |msg| %>
+         <% end %>
+      </ul>
     </div>
   <% end %>
 
