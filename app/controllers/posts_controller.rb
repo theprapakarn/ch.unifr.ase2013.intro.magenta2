@@ -10,11 +10,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(params[:post].permit(:title, :text))
 
-    if @post.save
-      redirect_to @post
-    else
-      render 'new'
-    end
+    @post.save
   end
 
   def show
