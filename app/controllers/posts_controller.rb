@@ -8,7 +8,10 @@ class PostsController < ApplicationController
   end
 
   def create
-    render text: params[:post].inspect
+    @post = Post.new(params[:post].permit(:title, :text))
+
+    @post.save
+    redirect_to @post
   end
 
   def show
