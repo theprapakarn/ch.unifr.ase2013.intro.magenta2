@@ -12,7 +12,6 @@ class PostsController < ApplicationController
     
    @post.save
     redirect_to @post
-    end
   end
 
   def show
