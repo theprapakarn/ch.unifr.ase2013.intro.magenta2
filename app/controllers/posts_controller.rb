@@ -1,8 +1,4 @@
 class PostsController < ApplicationController
-  
-  def new
-    @post = Post.new(params[:post].permit(:title, :text))
-  end
  
   def index
     @posts = Post.all
@@ -10,7 +6,8 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(params[:post].permit(:title, :text))
-    @post.save
+    
+   @post.save
     redirect_to @post
     end
   end
