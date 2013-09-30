@@ -8,5 +8,10 @@
   <%= @post.text %>
 </p>
 
+<h2>Add a Comment:</h2>
+<%= form_for([@post, @post.comments.build]) do |f| %>
+
+<% end %>
+
 <%= link_to 'Back', posts_path %>
 | <%= link_to 'Edit', edit_post_path(@post) %>
